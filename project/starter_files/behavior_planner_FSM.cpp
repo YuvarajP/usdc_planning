@@ -78,6 +78,7 @@ double BehaviorPlannerFSM::get_look_ahead_distance(const State& ego_state) {
   // the distance you will need to come to a stop while traveling at speed V and
   // using a comfortable deceleration.
   // auto look_ahead_distance = velocity_mag + 0.5 * accel_mag ** 2;
+  VelocityProfileGenerator vpg;
   auto look_ahead_distance = vpg.calc_distance(velocity_mag, 0, -_max_accel);
   // auto look_ahead_distance = 1.0;  // <- Fix This
 

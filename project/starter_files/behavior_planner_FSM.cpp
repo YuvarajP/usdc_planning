@@ -9,6 +9,8 @@
  **/
 
 #include "behavior_planner_FSM.h"
+#include "velocity_profile_generator.h"
+
 
 State BehaviorPlannerFSM::get_closest_waypoint_goal(
     const State& ego_state, const SharedPtr<cc::Map>& map,
